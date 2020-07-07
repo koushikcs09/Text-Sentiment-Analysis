@@ -1,4 +1,4 @@
-# Text-Sentiment-Analysis
+# Text Sentiment Analysis
 
 ### Import required libraries
 ```python
@@ -76,9 +76,9 @@ The Text might contain mixed sentiment – a portion of the text having positive
 #### Multiple Adjective:
 The text might contain multiple adjective (both positive and negative) to emphasize on a particular thing.
 
-*E.g :* The application is much more slower. <Here, the words positive words - ‘much’, ’more’ puts stress on the negative word ‘slower’. The Mixed combination of adjectives/adverb (positive and negative) might results in different sentiments.
+*E.g :* The application is much more slower. <Here, the words positive words - ‘much’, ’more’ puts stress on the negative word ‘slower’. The Mixed combination of adjectives / adverb (positive and negative) might results in different sentiments.
 
-*Resolution:* The Multiple adjective/adverb has been replaced with single main adjective to identify the actual polarity of the text.
+*Resolution:* The Multiple adjective / adverb has been replaced with single main adjective to identify the actual polarity of the text.
 
 In the above example, The application is much more **slower (Mixed)**  \-> The application is **slower (Negative)**
 
@@ -88,7 +88,7 @@ The Text might contain Phrases, which needs to convert to meaningful sentence to
 **E.g**: Twenty four seven (*Neutral*) \-> All time (*Positive*)
 A piece of cake (*Neutral*) \-> Very Easy task (*Positive*)
 
-#####  **Sarcastic Phrases:
+#####  Sarcastic Phrases:
 The Text might contain Sarcastic Phrases, which creates ambiguity in identifying the actual sentiment of the Text.
 
 *E.g :* The Service Could have been better and faster
@@ -115,7 +115,7 @@ E.g: “Want to speak to real person **than** machine”
 
 Want to speak to real person **than** machine (Positive) **\->**  Want to speak to real person (Positive)
 
-**Not** Want to speak to machine (Negative)
+**"Not"** Want to speak to machine (Negative).
 ####  New Algorithm for correction of Sentiment Analysis :
 
   **Case 0** - Both TextBlob and Vader are having same non-neutral sentiment **=>** Final Sentiment **=** *Vader Sentiment*
@@ -138,7 +138,6 @@ Want to speak to real person **than** machine (Positive) **\->**  Want to speak 
 
 - e.  Re-do the Vader and TextBlob Sentiment ,give more priority to Vader and If Vader sentiment is neutral, then the TextBlob Sentiment is chosen.
 
-**Case 4** - Both TextBlob and Vader Sentiment differs but not Neutral (same logic of *Case3*) **=>** Final Sentiment **=** priority 1.
-
-(*Vader Sentiment* of modified Text) or priority 2 (*TextBlob Sentiment* of modified Text).
-
+**Case 4** - Both TextBlob and Vader Sentiment differs but not Neutral (same logic of *Case3*) **=>** Final Sentiment **=** 
+ - [ ] priority 1. (*Vader Sentiment* of modified Text) 
+ - [ ]  priority 2. (*TextBlob Sentiment* of modified Text)
